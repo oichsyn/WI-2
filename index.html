@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8">
+
+<style>
+
+
+  body{font-size: 40px;
+      font-family: "Noto Sans KR", sans-serif;
+      text-align: center;}
+
+  .result {display: inline-block;
+          background-color: black;
+          border: 3px solid #ffd700;
+          border-radius: 15px;
+          padding: 60px 150px;
+          margin-top: 50px;
+          line-height: 1.8;
+          color: white;}
+
+  .highlight {color: #FF2121;
+              font-weight: bold;}
+
+</style>
+
+</head>
+
+<body>
+
+<script>
+
+let wage = prompt("당신의 시급은? 예)10030");
+let hoursPerWeek = prompt("일주일에 몇 시간 일하나요? 예)10");
+
+
+function calcMonthlyPay(wage, hoursPerWeek){
+
+  let monthly = wage * hoursPerWeek * 4;
+
+  document.body.innerHTML = 
+    '<div class="result">' +
+      "시급: " + wage + "원<br>" +
+      "주당 근무시간: " + hoursPerWeek + "시간<br><br>" +
+      '예상 월급: <span class="highlight">' + monthly + '</span> 원' +
+    '</div>' +
+    '<br><img src="catworking.gif" width="200" style="margin-top: 50px;">';
+}
+
+calcMonthlyPay(Number(wage), Number(hoursPerWeek));
+ 
+</script>
+
+</body>
+
+</html>
